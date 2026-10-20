@@ -1,0 +1,121 @@
+package src.main.groovy
+
+@Grab('ch.qos.logback:logback-classic:1.2.3')
+@Grab('org.slf4j:slf4j-simple:1.7.25')
+import org.slf4j.Logger
+import src.main.library.LoggerFactory
+
+import javax.crypto.Mac
+import javax.crypto.spec.SecretKeySpec
+import java.security.InvalidKeyException
+import java.security.MessageDigest
+
+import groovy.json.*
+
+//LOG_PATH = System.getenv('LOG_PATH')
+//if (LOG_PATH == null) {
+//	LOG_PATH = '/tmp/groovlets.log'
+//}
+//
+//void log(String message) {
+//	String timestamp = new Date().format('yyyy-MM-dd hh:mm:ss')
+//	new File(LOG_PATH).append("[$timestamp] PULL ${request.remoteHost} $message\n")
+//}
+
+Logger logger = LoggerFactory.getLogger("PULL")
+
+String sign(String msg) {
+	String secret = System.env['GITHUB_SECRET']
+	if (!secret) {
+        logger.warn "GITHUB_SECRET has not been set."
+		return "Secret unavailable"
+	}
+	try {
+		SecretKeySpec spec = new SecretKeySpec(secret.bytes, 'HmacSHA1')
+		Mac mac = Mac.getInstance('HmacSHA1')
+		mac.init(spec)
+		byte[] digest = mac.doFinal(msg.bytes)
+		//return asHex(digest)
+		return "sha1=" + digest.encodeHex()
+	} 
+	catch (InvalidKeyException e) {
+		return "Invalid Key: ${e.message}"
+	}
+}
+
+String method = request.method
+
+if (method != 'POST') {
+	logger.info("Invalid request method: $method")
+	response.status = 405 // Method not allowed.
+	response.addHeader('Allow', 'POST')
+	return
+}
+
+if (request.contentType != 'application/json') {
+	logger.info "Invalid content-type ${request.contentType}"
+	response.status = 415  // Unsupported type
+	response.addHeader('Accept', 'application/json')
+	//out.println "Accept: application/json"
+	return
+}
+
+String body = request.inputStream.text
+if (!body) {
+	logger.info "Empty body"
+	response.status = 400 // Bad request
+    out.println "Empty body"
+	return
+}
+
+// Check the signature.
+String expected = headers['X-Hub-Signature']
+if (!expected) {
+    logger.info "Missing signature."
+	out.println "Missing signature."
+	response.status = 400
+	return
+}
+String signature = sign(body)
+if (!MessageDigest.isEqual(signature.bytes, expected.bytes)) {
+	out.println "Invalid signature."
+	logger.info "Invalid signature."
+	response.status = 403
+	return
+}
+
+def push = new JsonSlurper().parseText(body)
+
+if (push.ref != 'refs/heads/master') {
+	logger.info("Pushed to non-master branch ${push.ref}")
+	response.status = 200
+	//response.addHeader("Branch-Pushed", push.ref)
+    out.println "Pushed to non-master branch ${push.ref}"
+	return
+}
+
+// These are the repositories we are interested in.
+Map repos = [ 
+	groovlets:'groovlets',
+	'jetstream-scripts':'scripts',
+	'service-manager-installation':'manager'
+]
+
+String name = push.repository.name
+String repo = repos[name]
+if (repo) {
+	StringBuilder buffer = new StringBuilder()
+	buffer << "Push to ${name} (${repo}) master\n"
+	buffer << "/var/lib/downloads/scripts/pull.sh $repo".execute().text
+    String message = buffer.toString()
+	out.println message
+	response.status = 200
+	logger.info message
+}
+else {
+	logger.info("Pushed to unsupported repository $name")
+	out.println "$name is not a supported respoitory."
+	response.status = 400
+}
+return
+

@@ -1,0 +1,23 @@
+import src.main.library.ThemeLoader
+
+// Shows the page banner in a theme.
+//   GET /theme?theme=dark          (installed themes: default, dark)
+//   GET /theme?skin=dark           (skin directory of the node)
+ThemeLoader themes = new ThemeLoader(new File(System.getProperty('groovlets.themes') ?: 'src/main/templates/themes'))
+Map model = [title: 'Services', node: System.getProperty('node.name') ?: 'local']
+response.contentType = 'text/plain'
+try {
+    if (params.skin) {
+        model.theme = params.skin
+        out.println themes.render(params.skin, model)
+        return
+    }
+    String name = params.theme ?: 'default'
+    model.theme = name
+    out.println themes.renderInstalled(name, model)
+}
+catch (IOException | IllegalArgumentException e) {
+    response.status = 404
+    out.println "Unknown theme."
+}
+return

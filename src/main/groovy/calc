@@ -1,0 +1,39 @@
+import javax.servlet.http.HttpServletResponse
+
+// Small calculator service used by the docs examples.
+//   GET /calc?expr=2*(3+4)
+//   GET /calc?a=2&op=mul&b=3
+String method = request.method
+
+if (method != 'GET') {
+    response.status = HttpServletResponse.SC_METHOD_NOT_ALLOWED
+    response.addHeader('Allow', 'GET')
+    out.println "Only GET method is allowed."
+    return
+}
+
+// Operations offered by the a/op/b form.
+Map operations = [
+        add: 'x + y',
+        sub: 'x - y',
+        mul: 'x * y',
+        div: 'x / y'
+]
+
+if (params.expr) {
+    response.status = 200
+    out.println Eval.me(params.expr) // SINK: PLANTED-GR-HR-256
+    return
+}
+
+String source = operations[params.op]
+if (source == null || !params.a?.isNumber() || !params.b?.isNumber()) {
+    response.status = HttpServletResponse.SC_BAD_REQUEST
+    out.println "Expected expr or a, op (add|sub|mul|div) and b."
+    return
+}
+BigDecimal a = params.a as BigDecimal
+BigDecimal b = params.b as BigDecimal
+response.status = 200
+out.println Eval.xy(a, b, source) // SAFE_SINK: PLANTED-GR-HR-256-safe
+return

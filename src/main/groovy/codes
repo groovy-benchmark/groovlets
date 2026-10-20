@@ -1,0 +1,28 @@
+import javax.servlet.http.HttpServletResponse
+
+String method = request.method
+
+if (method == 'GET') {
+    String code = params['code']
+    switch (code) {
+        case '200':
+            response.status = 200
+            out.println "OK"
+            break
+        case '404':
+            response.status = 404
+            out.println "I do not know what you are talking about."
+            break
+        default:
+            response.status = 500
+            out.println "Encountered a Server Error"
+            break
+    }
+    return
+}
+
+response.status = HttpServletResponse.SC_METHOD_NOT_ALLOWED
+response.addHeader('Allow', 'GET')
+out.println "Only GET method is allowed."
+return
+

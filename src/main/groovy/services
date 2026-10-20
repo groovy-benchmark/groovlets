@@ -1,0 +1,23 @@
+import src.main.library.ServiceFilter
+
+// Lists the services registered on this node (served from the bundled catalog).
+//   GET /services?filter=e.serviceName.startsWith('Stan')
+//   GET /services?field=name&contains=Stan
+List catalog = [
+        [serviceId: 'anc:stanford.tokenizer_2.0.0', serviceName: 'Stanford Tokenizer', serviceType: 'Tokenizer', serviceTypeDomain: 'nlp'],
+        [serviceId: 'anc:stanford.tagger_2.0.0', serviceName: 'Stanford Tagger', serviceType: 'Tagger', serviceTypeDomain: 'nlp'],
+        [serviceId: 'anc:gate.tokenizer_2.3.0', serviceName: 'GATE Tokenizer', serviceType: 'Tokenizer', serviceTypeDomain: 'nlp'],
+        [serviceId: 'anc:converter.json2gate_1.0.0', serviceName: 'JSON to GATE Converter', serviceType: 'Converter', serviceTypeDomain: 'format']
+]
+ServiceFilter filter = new ServiceFilter()
+List elements = catalog
+if (params.filter) {
+    elements = filter.applyFilter(catalog, params.filter)
+}
+else if (params.field) {
+    elements = filter.applyFieldFilter(catalog, params.field, params.contains ?: '')
+}
+response.status = 200
+response.contentType = 'application/json'
+out.println new groovy.json.JsonBuilder([totalCount: catalog.size(), elements: elements]).toPrettyString()
+return

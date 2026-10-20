@@ -1,0 +1,14 @@
+#!/usr/bin/env lsd
+
+Data data = new Data()
+data.discriminator = Uri.TEXT
+data.payload = "Karen flew to New York."
+data.parameters = [
+    url: 'http://vassar.lappsgrid.org/invoker/anc:stanford.tokenizer_2.0.0',
+    username: 'weblicht',
+    password: 'weblicht'
+]
+
+print data.asPrettyJson()
+println()
+

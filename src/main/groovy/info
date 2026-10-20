@@ -1,0 +1,50 @@
+package src.main.groovy
+
+@Grab('ch.qos.logback:logback-classic:1.2.3')
+@Grab('org.slf4j:slf4j-simple:1.7.25')
+import org.slf4j.Logger
+import src.main.library.LoggerFactory
+
+def method = request.method
+
+Logger logger = LoggerFactory.getLogger('info')
+logger.info("Generating info")
+html.html {
+    head {
+        title 'LAPPS Grid HTTP API'
+        link rel:'stylesheet', href:'/style/main.css'
+    }
+    body {
+        div(class:'header') {
+            h1 'The Language Applications Grid'
+            h2 'An open framework for interoperable web services'
+        }
+        div(class:'content') {
+            h1 'LAPPS Grid Pull Service'
+            p 'The only service remaining here is the /pull service used to update certain directories on the proxy server.  See https://api.lappsgrid.org/info for the new api services.'
+            table {
+                tr {
+                    th width:'15%', 'Path'
+                    th 'Description'
+                }
+                tr {
+                    td '/pull'
+                    td 'Webhook called by GitHub when respositories are updated.'
+                }
+                tr {
+                    td '/codes'
+                    td 'Dummy service for testing REST client status code handing'
+                }
+                tr {
+                    td '/info'
+                    td 'Displays this information page.'
+                }
+            }
+            mkp.yieldUnescaped '''<p>See the README in the <a href='https://github.com/lappsgrid-incubator/groovlets'>GitHub repository</a> for more information.</p>'''
+            h3 'NOTE'
+            mkp.yieldUnescaped '''<p>These services are refered to as <em>HTTP services</em> rather than <em>REST services</em>. While many of the services do conform to the REST Manifesto (for lack of a better term) some do not.  For example the <i>soap-proxy</i> accepts POST requests, but no <em>resource</em> is created.</p>'''
+
+            p align:'center', 'Copyright 2017 The Language Applications Grid.'
+        }
+    }
+}

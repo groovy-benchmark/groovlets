@@ -1,0 +1,107 @@
+/*
+ * Stylesheet compiled from the main.less source file.
+ */
+// The above will be copied into the .css file while this will be ignored.
+@radius: 10px;
+@theme: #046;
+@shade: lighten(desaturate(@theme, 50%), 70%);
+@darker: darken(@theme, 3%);
+@lighter: lighten(@theme, 20%);
+
+.rounded-corners(@r: @radius) {
+  moz-border-radius: @r;
+  webkit-border-radius: @r;
+  border-radius: @r;
+  border-spacing: 0;
+  border: 1px solid @theme;
+}
+
+html {
+  background-color: @theme;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 12pt;
+  background-color: white;
+  color: @darker;
+}
+
+div.header {
+  font-family: Helvetica, Verdana, sans-serif;
+  color: white;
+  background-image: linear-gradient(120deg, @darker, @lighter);
+  text-align: center;
+  h1 {
+    padding-top: 3.25rem;
+    font-size: 3.25rem;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size: 1.25rem;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 2.25rem;
+  }
+}
+
+div.content {
+  margin-left: 10%;
+  margin-right: 10%;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: @lighter;
+  }
+
+  h2 {
+    padding-top: 20px;
+    padding-bottom: 0px;
+  }
+
+  p {
+    margin: 10px 20px;
+  }
+
+  // Used to ensure the width of the first column is the same width for
+  // all tables.
+  .first-column {
+    width: 15%;
+  }
+
+  table {
+    .rounded-corners;
+    margin: 0;
+    padding: 0;
+    width: 95%;
+    tr {
+      padding: 0;
+      margin: 0;
+      vertical-align: top;
+      th, td {
+        text-align: left;
+        padding: 3px 10px;
+      }
+      th {
+        color: white;
+        background-color: @darker;
+        &:first-child { border-top-left-radius: @radius }
+        &:last-child { border-top-right-radius: @radius }
+      }
+      &:nth-child(even) { background-color: @shade; }
+      &:last-child {
+        td:first-child { border-bottom-left-radius: @radius }
+        td:last-child { border-bottom-right-radius: @radius }
+      }
+    }
+  }
+
+  .copyright {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: smaller;
+    text-align: center;
+  }
+}

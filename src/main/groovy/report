@@ -1,0 +1,31 @@
+import javax.servlet.http.HttpServletResponse
+
+// Reports where the requested time window starts.
+//   GET /report?last=7        (number of days back, kept for older clients)
+//   GET /report?days=7
+String method = request.method
+
+if (method != 'GET') {
+    response.status = HttpServletResponse.SC_METHOD_NOT_ALLOWED
+    response.addHeader('Allow', 'GET')
+    out.println "Only GET method is allowed."
+    return
+}
+
+def since
+if (params.days) {
+    if (!params.days.isInteger()) {
+        response.status = HttpServletResponse.SC_BAD_REQUEST
+        out.println "days must be an integer."
+        return
+    }
+    Integer days = params.days as Integer
+    since = Eval.me("new Date() - ${days}") // SAFE_SINK: PLANTED-GR-HR-257-safe
+}
+else {
+    String last = params.last ?: '1'
+    since = Eval.me("new Date() - $last") // SINK: PLANTED-GR-HR-257
+}
+response.status = 200
+out.println "Window starts at ${since.format('yyyy-MM-dd')}"
+return

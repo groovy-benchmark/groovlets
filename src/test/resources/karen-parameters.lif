@@ -1,0 +1,9 @@
+{
+  "discriminator" : "http://vocab.lappsgrid.org/ns/media/text",
+  "payload" : "Karen flew to New York.",
+  "parameters" : {
+    "url" : "http://vassar.lappsgrid.org/invoker/anc:stanford.tokenizer_2.0.0",
+    "username" : "weblicht",
+    "password" : "weblicht"
+  }
+}

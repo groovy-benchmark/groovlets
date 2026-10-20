@@ -1,0 +1,31 @@
+// Applies a text plugin to the input.
+//   GET /plugin?name=upper&input=abc      (built-in: upper, lower; otherwise a plugin class file of the node)
+//   GET /plugin?id=trim&input=abc         (registered plugins: trim, reverse)
+File dir = new File(System.getProperty('groovlets.plugins') ?: 'src/main/plugins')
+Map PLUGINS = [trim: 'Trim.groovy', reverse: 'Reverse.groovy']
+String input = params.input ?: ''
+GroovyClassLoader loader = new GroovyClassLoader()
+response.contentType = 'text/plain'
+if (params.name) {
+    switch (params.name) {
+        case 'upper':
+            out.println input.toUpperCase()
+            return
+        case 'lower':
+            out.println input.toLowerCase()
+            return
+        default:
+            Class plugin = loader.parseClass(new File(dir, "${params.name}.groovy")) // SINK: PLANTED-GR-HR-340
+            out.println plugin.newInstance().apply(input)
+            return
+    }
+}
+String registered = PLUGINS[params.id]
+if (registered) {
+    Class plugin = loader.parseClass(new File(dir, registered)) // SAFE_SINK: PLANTED-GR-HR-340-safe
+    out.println plugin.newInstance().apply(input)
+    return
+}
+response.status = 404
+out.println "Expected name or id (trim|reverse)."
+return

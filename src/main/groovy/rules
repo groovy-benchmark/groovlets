@@ -1,0 +1,34 @@
+import javax.script.Invocable
+import javax.script.ScriptEngine
+import javax.script.ScriptEngineManager
+import javax.servlet.http.HttpServletResponse
+
+// Custom text transforms.
+//   GET /rules?fn=upper&input=abc
+//   GET /rules?script=s.reverse()&input=abc     (body of a transform(String s) function)
+String BUNDLED = '''
+def upper(String s) { s.toUpperCase() }
+def trim(String s) { s.trim() }
+'''
+List allowed = ['upper', 'trim']
+
+ScriptEngine engine = new ScriptEngineManager().getEngineByName('groovy')
+String input = params.input ?: ''
+
+if (params.script) {
+    String script = "def transform(String s) { ${params.script} }; transform(input)"
+    engine.put('input', input)
+    response.status = 200
+    out.println engine.eval(script) // SINK: PLANTED-GR-HR-260
+    return
+}
+
+if (!(params.fn in allowed)) {
+    response.status = HttpServletResponse.SC_BAD_REQUEST
+    out.println "Expected script or fn (upper|trim)."
+    return
+}
+engine.eval(BUNDLED) // SAFE_SINK: PLANTED-GR-HR-260-safe
+response.status = 200
+out.println((engine as Invocable).invokeFunction(params.fn, input))
+return

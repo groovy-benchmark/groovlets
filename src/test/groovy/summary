@@ -1,0 +1,30 @@
+import groovy.json.*
+import org.lappsgrid.client.ServiceClient
+
+File brandeis = new File('src/test/resources/brandeis.json')
+
+def server = new JsonSlurper().parse(brandeis)
+
+println server.url
+
+server.elements.each { service ->
+    String name = service.serviceId
+    int colon = name.indexOf(':')
+    if (colon > 0) {
+        name = name.substring(colon + 1)
+    }
+    //println "${service.serviceDescription}\t${id}"
+    String url = "${server.url}/invoker/${service.serviceId}"
+    ServiceClient client = new ServiceClient(url, "tester", "tester")
+    println "Getting metadata from $name"
+    String json = client.getMetadata();
+    File directory = new File('src/test/resources/services')
+    if (!directory.exists()) {
+        if (!directory.mkdirs()) {
+            throw new IOException("Unable to create services directory: " + directory.path)
+        }
+    }
+    File file = new File(directory, name + ".json")
+    file.text = groovy.json.JsonOutput.prettyPrint(json)
+    println "Wrote ${file.path}"
+}

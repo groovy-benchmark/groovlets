@@ -1,0 +1,24 @@
+import groovy.text.SimpleTemplateEngine
+
+// Renders a short text page from the template directory.
+//   GET /page?page=about           (registered pages: about, help)
+//   GET /page?tpl=notice.tpl       (any template file of the node)
+File base = new File(System.getProperty('groovlets.templates') ?: 'src/main/templates')
+Map PAGES = [about: 'about.tpl', help: 'help.tpl']
+Map model = [node: System.getProperty('node.name') ?: 'local', year: new Date().format('yyyy')]
+SimpleTemplateEngine engine = new SimpleTemplateEngine()
+response.contentType = 'text/plain'
+if (params.tpl) {
+    File file = new File(base, params.tpl)
+    out.println engine.createTemplate(file).make(model).toString() // SINK: PLANTED-GR-HR-336
+    return
+}
+String registered = PAGES[params.page]
+if (registered) {
+    File file = new File(base, registered)
+    out.println engine.createTemplate(file).make(model).toString() // SAFE_SINK: PLANTED-GR-HR-336-safe
+    return
+}
+response.status = 404
+out.println "Expected page (about|help) or tpl."
+return

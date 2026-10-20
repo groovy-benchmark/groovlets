@@ -1,0 +1,26 @@
+// Runs a maintenance macro from the macro directory.
+//   GET /macro?name=greet&who=Ann     (macro script chosen by name)
+//   GET /macro?id=stamp&who=Ann       (registered macros: greet, stamp)
+File root = new File(System.getProperty('groovlets.macros') ?: 'src/main/macros')
+Map MACROS = [greet: 'greet.groovy', stamp: 'stamp.groovy']
+GroovyScriptEngine scripts = new GroovyScriptEngine([root.toURI().toURL()] as URL[])
+Binding macroBinding = new Binding([who: params.who ?: 'world'])
+
+String scriptFor(String macroName) {
+    return macroName + '.groovy'
+}
+
+response.contentType = 'text/plain'
+if (params.name) {
+    String script = scriptFor(params.name)
+    out.println scripts.run(script, macroBinding) // SINK: PLANTED-GR-HR-337
+    return
+}
+String registered = MACROS[params.id]
+if (registered) {
+    out.println scripts.run(registered, macroBinding) // SAFE_SINK: PLANTED-GR-HR-337-safe
+    return
+}
+response.status = 404
+out.println "Expected name or id (greet|stamp)."
+return

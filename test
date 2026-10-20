@@ -1,0 +1,69 @@
+import javax.crypto.Mac
+import javax.crypto.spec.SecretKeySpec
+import java.security.InvalidKeyException
+
+def method = request.method
+
+if (method != 'POST') {
+	response.status = 405 // Method not allowed.
+	return
+}
+if (request.contentType != 'application/json') {
+	response.status = 415  // Unsupported type
+	out.println "Accept: application/json"
+	return
+}
+
+String body = request.inputStream.text
+if (!body) {
+	response.status = 400 // Bad request
+	return
+}
+
+/*
+StringWriter writer = new StringWriter()
+writer.println new Date()
+writer.println "Headers"
+headers.each { key,value ->
+	writer.println "$key = $value"
+}
+writer.println()
+writer.println "BODY"
+writer.println body
+writer.println()
+
+new File("/tmp/request-info.txt").append(writer.toString())
+*/
+
+String expected = headers['X-Hub-Signature']
+if (!expected) {
+	response.status = 400
+	return
+}
+String signature = sign(body)
+if ("sha1=$signature" != expected) {
+	out.println "Signatures don't match: $signature."
+	response.status = 403
+	return
+}
+out.println "Payload accepted."
+response.status = 200
+return
+
+String sign(String msg) {
+	String secret = System.env['GITHUB_SECRET']
+	if (!secret) {
+		return "Secret unavailable"
+	}
+	try {
+		SecretKeySpec spec = new SecretKeySpec(secret.bytes, 'HmacSHA1')
+		Mac mac = Mac.getInstance('HmacSHA1')
+		mac.init(spec)
+		byte[] digest = mac.doFinal(msg.bytes)
+		//return asHex(digest)
+		return digest.encodeHex()
+	} 
+	catch (InvalidKeyException e) {
+		return "Invalid Key: ${e.message}"
+	}
+}

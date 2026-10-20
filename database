@@ -1,0 +1,125 @@
+/*
+ * Use this Groovlet to initialize the database used for the PID registration
+ * service. For security reasons this is not left in the src/main/groovy directory
+ * until needed.
+ */
+
+@GrabConfig(systemClassLoader=true)
+@Grab('com.h2database:h2:1.4.194')
+
+import groovy.sql.Sql
+
+LOG_PATH = System.getenv('LOG_PATH')
+if (LOG_PATH == null) {
+    LOG_PATH = '/tmp/groovlets.log'
+}
+
+DB_URL = System.getenv('DB_URL')
+if (DB_URL == null) {
+    DB_URL = "jdbc:h2:file://tmp/pid"
+}
+
+Class.forName("org.h2.Driver")
+Sql sql = Sql.newInstance(DB_URL, "pid", "pid", "org.h2.Driver")
+
+void log(String message) {
+    String timestamp = new Date().format('yyyy-MM-dd hh:mm:ss')
+    new File(LOG_PATH).append("[$timestamp] DB ${request.remoteHost} $message\n")
+}
+
+void respond(int code, String message) {
+    response.status = code
+    out.println message
+}
+
+// Always respond to OPTION requests.
+if (request.method == 'OPTIONS') {
+    response.status = 200
+    response.addHeader('Allow', 'DELETE, GET, POST')
+    response.addHeader('WWW-Authenticate', 'token')
+    return
+}
+
+// GET : list the table contents.
+if (request.method == 'GET') {
+    log("Returning table contents to " + request.remoteHost)
+//    if (headers.Accept == 'text/html') {
+//        html {
+//            h1 "Greetings"
+//            p "Well, isn't that special."
+//        }
+//        return
+//    }
+//    List rows = []
+//    sql.eachRow('select * from pid;') { row ->
+//        rows << [url:row.url, pid:row.pid]
+//    }
+//    response.status = 200
+//    response.contentType='application/json'
+//    out.println new groovy.json.JsonBuilder(rows).toPrettyString()
+    html.html {
+        head {
+            title 'PID Repository'
+        }
+        body {
+            h1 "Results"
+            table {
+                tr {
+                    th 'URL'
+                    th 'PID'
+                }
+                sql.eachRow('select * from pid') { row ->
+                    tr {
+                        td row.url
+                        td row.pid
+                    }
+                }
+            }
+        }
+    }
+    return
+}
+
+// Check authorization headers
+if (!headers.Authorization) {
+    response.status = 401
+    response.addHeader('WWW-Authenticate', 'token')
+    out.println "No Authorization header."
+    log('Unathorized access attempt.')
+    return
+}
+if (headers.Authorization != "token ${System.getenv('PID_TOKEN')}") {
+    response.status = 401
+    response.addHeader('WWW-Authenticate', 'token')
+    out.println "Invalid token."
+    log('Unathorized access attempt from.')
+    return
+}
+
+// From this point on we assume the user is authorized.
+
+// DELETE : drop the table.
+if (request.method == 'DELETE') {
+    sql.execute 'drop table pid if exists;'
+    log('Dropped the table.')
+    respond(200, 'Table dropped.')
+    return
+}
+
+// POST : create the table
+if (request.method == 'POST') {
+    sql.execute """
+create table pid (
+  url VARCHAR NOT NULL PRIMARY KEY ,
+  pid VARCHAR NOT NULL,
+);
+"""
+    log("Created the table.")
+    respond(201, "Apparently we created a table....")
+    return
+}
+
+
+log("Invalid request.")
+respond(405, "No if statement matched.")
+return

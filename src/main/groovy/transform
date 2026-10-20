@@ -1,0 +1,17 @@
+import javax.servlet.http.HttpServletResponse
+import src.main.library.Evaluators
+
+// Text transformation service.
+//   GET /transform?input=hello             -> HELLO
+//   GET /transform?mode=script&input=...   -> evaluates the input as a Groovy expression
+String input = params.input
+if (!input) {
+    response.status = HttpServletResponse.SC_BAD_REQUEST
+    out.println "Missing input."
+    return
+}
+
+def evaluator = Evaluators.forMode(params.mode)
+response.status = 200
+out.println evaluator.run(input)
+return

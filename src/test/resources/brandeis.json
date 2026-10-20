@@ -1,0 +1,1030 @@
+{
+    "url": "http://eldrad.cs-i.brandeis.edu:8080/service_manager",
+    "totalCount": 64,
+    "elements": [
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:46+0000",
+            "serviceId": "brandeis_eldrad_grid_1:reverb.relationextractor_1.0.1",
+            "registeredDate": "2017-05-16T13:21:46+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "ReVerb Relation Extractor",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "ReVerb Relation Extractor (v1.0.1)",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:reverb.relationextractor_1.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:45+0000",
+            "serviceId": "brandeis_eldrad_grid_1:reverb.relationextractor_1.0.0",
+            "registeredDate": "2017-05-16T13:21:45+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "ReVerb Relation Extractor",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "ReVerb Relation Extractor (v1.0.0)",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:reverb.relationextractor_1.0.0",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:45+0000",
+            "serviceId": "brandeis_eldrad_grid_1:gate.annie.namedentityrecognizer_0.0.1",
+            "registeredDate": "2017-05-16T13:21:45+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Gate Annie NamedEntityRecognizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Gate Annie (v0.0.1) NamedEntityRecognizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:gate.annie.namedentityrecognizer_0.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:45+0000",
+            "serviceId": "brandeis_eldrad_grid_1:gate.annie.postagger_0.0.1",
+            "registeredDate": "2017-05-16T13:21:45+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Gate Annie POSTagger",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Gate Annie (v0.0.1) POSTagger",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:gate.annie.postagger_0.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:45+0000",
+            "serviceId": "brandeis_eldrad_grid_1:gate.annie.tokenizer_0.0.1",
+            "registeredDate": "2017-05-16T13:21:45+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Gate Annie Tokenizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Gate Annie (v0.0.1) Tokenizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:gate.annie.tokenizer_0.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:45+0000",
+            "serviceId": "brandeis_eldrad_grid_1:gate.annie.splitter_0.0.1",
+            "registeredDate": "2017-05-16T13:21:45+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Gate Annie Splitter",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Gate Annie (v0.0.1) Splitter",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:gate.annie.splitter_0.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:45+0000",
+            "serviceId": "brandeis_eldrad_grid_1:gate.opennlp.namedentityrecognizer_0.0.1",
+            "registeredDate": "2017-05-16T13:21:45+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Gate OpenNLP NamedEntityRecognizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Gate OpenNLP (v0.0.1) NamedEntityRecognizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:gate.opennlp.namedentityrecognizer_0.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:45+0000",
+            "serviceId": "brandeis_eldrad_grid_1:gate.opennlp.postagger_0.0.1",
+            "registeredDate": "2017-05-16T13:21:45+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Gate OpenNLP POSTagger",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Gate OpenNLP (v0.0.1) POSTagger",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:gate.opennlp.postagger_0.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:45+0000",
+            "serviceId": "brandeis_eldrad_grid_1:gate.opennlp.tokenizer_0.0.1",
+            "registeredDate": "2017-05-16T13:21:45+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Gate OpenNLP Tokenizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Gate OpenNLP (v0.0.1) Tokenizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:gate.opennlp.tokenizer_0.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:45+0000",
+            "serviceId": "brandeis_eldrad_grid_1:gate.opennlp.splitter_0.0.1",
+            "registeredDate": "2017-05-16T13:21:45+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Gate OpenNLP Splitter",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Gate OpenNLP (v0.0.1) Splitter",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:gate.opennlp.splitter_0.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:45+0000",
+            "serviceId": "brandeis_eldrad_grid_1:uima.dkpro.stanfordnlp.coref_0.0.1",
+            "registeredDate": "2017-05-16T13:21:45+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "DkPro UIMA Stanford NLP Coreference",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "DkPro UIMA Stanford NLP (v0.0.1) Coreference",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:uima.dkpro.stanfordnlp.coref_0.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:45+0000",
+            "serviceId": "brandeis_eldrad_grid_1:uima.dkpro.stanfordnlp.parser_0.0.1",
+            "registeredDate": "2017-05-16T13:21:45+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "DkPro UIMA Stanford NLP Parser",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "DkPro UIMA Stanford NLP (v0.0.1) Parser",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:uima.dkpro.stanfordnlp.parser_0.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:44+0000",
+            "serviceId": "brandeis_eldrad_grid_1:uima.dkpro.stanfordnlp.namedentityrecognizer_0.0.1",
+            "registeredDate": "2017-05-16T13:21:44+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "DkPro UIMA Stanford NLP NamedEntityRecognizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "DkPro UIMA Stanford NLP (v0.0.1) NamedEntityRecognizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:uima.dkpro.stanfordnlp.namedentityrecognizer_0.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:44+0000",
+            "serviceId": "brandeis_eldrad_grid_1:uima.dkpro.stanfordnlp.postagger_0.0.1",
+            "registeredDate": "2017-05-16T13:21:44+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "DkPro UIMA Stanford NLP POSTagger",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "DkPro UIMA Stanford NLP (v0.0.1) POSTagger",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:uima.dkpro.stanfordnlp.postagger_0.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:44+0000",
+            "serviceId": "brandeis_eldrad_grid_1:uima.dkpro.stanfordnlp.tokenizer_0.0.1",
+            "registeredDate": "2017-05-16T13:21:44+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "DkPro UIMA Stanford NLP Tokenizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "DkPro UIMA Stanford NLP (v0.0.1) Tokenizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:uima.dkpro.stanfordnlp.tokenizer_0.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:44+0000",
+            "serviceId": "brandeis_eldrad_grid_1:uima.dkpro.stanfordnlp.splitter_0.0.1",
+            "registeredDate": "2017-05-16T13:21:44+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "DkPro UIMA Stanford NLP Splitter",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "DkPro UIMA Stanford NLP (v0.0.1) Splitter",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:uima.dkpro.stanfordnlp.splitter_0.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:44+0000",
+            "serviceId": "brandeis_eldrad_grid_1:uima.dkpro.opennlp.namedentityrecognizer_0.0.1",
+            "registeredDate": "2017-05-16T13:21:44+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "DkPro UIMA OpenNLP NamedEntityRecognizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "DkPro UIMA OpenNLP (v0.0.1) NamedEntityRecognizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:uima.dkpro.opennlp.namedentityrecognizer_0.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:44+0000",
+            "serviceId": "brandeis_eldrad_grid_1:uima.dkpro.opennlp.parser_0.0.1",
+            "registeredDate": "2017-05-16T13:21:44+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "DkPro UIMA OpenNLP Parser",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "DkPro UIMA OpenNLP (v0.0.1) Parser",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:uima.dkpro.opennlp.parser_0.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:44+0000",
+            "serviceId": "brandeis_eldrad_grid_1:uima.dkpro.opennlp.postagger_0.0.1",
+            "registeredDate": "2017-05-16T13:21:44+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "DkPro UIMA OpenNLP POSTagger",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "DkPro UIMA OpenNLP (v0.0.1) POSTagger",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:uima.dkpro.opennlp.postagger_0.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:44+0000",
+            "serviceId": "brandeis_eldrad_grid_1:uima.dkpro.opennlp.tokenizer_0.0.1",
+            "registeredDate": "2017-05-16T13:21:44+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "DkPro UIMA OpenNLP Tokenizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "DkPro UIMA OpenNLP (v0.0.1) Tokenizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:uima.dkpro.opennlp.tokenizer_0.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:44+0000",
+            "serviceId": "brandeis_eldrad_grid_1:uima.dkpro.opennlp.splitter_0.0.1",
+            "registeredDate": "2017-05-16T13:21:44+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "DkPro UIMA OpenNLP Splitter",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "DkPro UIMA OpenNLP (v0.0.1) Splitter",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:uima.dkpro.opennlp.splitter_0.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:44+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.coref_2.0.3",
+            "registeredDate": "2017-05-16T13:21:44+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP Coreference",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.3) NLP Coreference",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.coref_2.0.3",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:44+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.dependencyparser_2.0.3",
+            "registeredDate": "2017-05-16T13:21:44+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP DependencyParser",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.3) NLP DependencyParser",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.dependencyparser_2.0.3",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:44+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.parser_2.0.3",
+            "registeredDate": "2017-05-16T13:21:44+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP Parser",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.3) NLP Parser",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.parser_2.0.3",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:44+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.splitter_2.0.3",
+            "registeredDate": "2017-05-16T13:21:44+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP Splitter",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.3) NLP Splitter",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.splitter_2.0.3",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:44+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.namedentityrecognizer_2.0.3",
+            "registeredDate": "2017-05-16T13:21:44+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP NamedEntityRecognizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.3) NLP NamedEntityRecognizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.namedentityrecognizer_2.0.3",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:44+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.tokenizer_2.0.3",
+            "registeredDate": "2017-05-16T13:21:44+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP Tokenizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.3) NLP Tokenizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.tokenizer_2.0.3",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:44+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.postagger_2.0.3",
+            "registeredDate": "2017-05-16T13:21:44+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP POSTagger",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.3) NLP POSTagger",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.postagger_2.0.3",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:44+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.coref_2.0.2",
+            "registeredDate": "2017-05-16T13:21:44+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP Coreference",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.2) NLP Coreference",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.coref_2.0.2",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:44+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.dependencyparser_2.0.2",
+            "registeredDate": "2017-05-16T13:21:44+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP DependencyParser",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.2) NLP DependencyParser",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.dependencyparser_2.0.2",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:43+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.parser_2.0.2",
+            "registeredDate": "2017-05-16T13:21:43+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP Parser",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.2) NLP Parser",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.parser_2.0.2",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:43+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.splitter_2.0.2",
+            "registeredDate": "2017-05-16T13:21:43+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP Splitter",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.2) NLP Splitter",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.splitter_2.0.2",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:43+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.namedentityrecognizer_2.0.2",
+            "registeredDate": "2017-05-16T13:21:43+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP NamedEntityRecognizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.2) NLP NamedEntityRecognizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.namedentityrecognizer_2.0.2",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:43+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.tokenizer_2.0.2",
+            "registeredDate": "2017-05-16T13:21:43+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP Tokenizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.2) NLP Tokenizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.tokenizer_2.0.2",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:43+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.postagger_2.0.2",
+            "registeredDate": "2017-05-16T13:21:43+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP POSTagger",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.2) NLP POSTagger",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.postagger_2.0.2",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:43+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.coref_2.0.1",
+            "registeredDate": "2017-05-16T13:21:43+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP Coreference",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.1) NLP Coreference",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.coref_2.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:43+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.dependencyparser_2.0.1",
+            "registeredDate": "2017-05-16T13:21:43+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP DependencyParser",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.1) NLP DependencyParser",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.dependencyparser_2.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:43+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.parser_2.0.1",
+            "registeredDate": "2017-05-16T13:21:43+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP Parser",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.1) NLP Parser",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.parser_2.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:43+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.splitter_2.0.1",
+            "registeredDate": "2017-05-16T13:21:43+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP Splitter",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.1) NLP Splitter",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.splitter_2.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:43+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.namedentityrecognizer_2.0.1",
+            "registeredDate": "2017-05-16T13:21:43+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP NamedEntityRecognizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.1) NLP NamedEntityRecognizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.namedentityrecognizer_2.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:43+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.tokenizer_2.0.1",
+            "registeredDate": "2017-05-16T13:21:43+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP Tokenizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.1) NLP Tokenizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.tokenizer_2.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:43+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.postagger_2.0.1",
+            "registeredDate": "2017-05-16T13:21:43+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP POSTagger",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.1) NLP POSTagger",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.postagger_2.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:43+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.dependencyparser_2.0.0",
+            "registeredDate": "2017-05-16T13:21:43+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP Parser",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.0) NLP Dependency Parser",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.dependencyparser_2.0.0",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:43+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.parser_2.0.0",
+            "registeredDate": "2017-05-16T13:21:43+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP Parser",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.0) NLP Parser",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.parser_2.0.0",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:43+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.splitter_2.0.0",
+            "registeredDate": "2017-05-16T13:21:43+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP Splitter",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.0) NLP Splitter",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.splitter_2.0.0",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:43+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.namedentityrecognizer_2.0.0",
+            "registeredDate": "2017-05-16T13:21:43+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP NamedEntityRecognizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.0) NLP NamedEntityRecognizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.namedentityrecognizer_2.0.0",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:43+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.tokenizer_2.0.0",
+            "registeredDate": "2017-05-16T13:21:43+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP Tokenizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.0) NLP Tokenizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.tokenizer_2.0.0",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:43+0000",
+            "serviceId": "brandeis_eldrad_grid_1:stanfordnlp.postagger_2.0.0",
+            "registeredDate": "2017-05-16T13:21:43+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "Stanford NLP POSTagger",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "Stanford (v2.0.0) NLP POSTagger",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:stanfordnlp.postagger_2.0.0",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:42+0000",
+            "serviceId": "brandeis_eldrad_grid_1:opennlp.parser_2.0.2",
+            "registeredDate": "2017-05-16T13:21:42+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "OpenNLP Parser",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "OpenNLP (v2.0.2) Parser",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:opennlp.parser_2.0.2",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:42+0000",
+            "serviceId": "brandeis_eldrad_grid_1:opennlp.splitter_2.0.2",
+            "registeredDate": "2017-05-16T13:21:42+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "OpenNLP Splitter",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "OpenNLP (v2.0.2) Splitter",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:opennlp.splitter_2.0.2",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:42+0000",
+            "serviceId": "brandeis_eldrad_grid_1:opennlp.namedentityrecognizer_2.0.2",
+            "registeredDate": "2017-05-16T13:21:42+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "OpenNLP NamedEntityRecognizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "OpenNLP (v2.0.2) NamedEntityRecognizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:opennlp.namedentityrecognizer_2.0.2",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:42+0000",
+            "serviceId": "brandeis_eldrad_grid_1:opennlp.tokenizer_2.0.2",
+            "registeredDate": "2017-05-16T13:21:42+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "OpenNLP Tokenizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "OpenNLP (v2.0.2) Tokenizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:opennlp.tokenizer_2.0.2",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:42+0000",
+            "serviceId": "brandeis_eldrad_grid_1:opennlp.postagger_2.0.2",
+            "registeredDate": "2017-05-16T13:21:42+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "OpenNLP POSTagger",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "OpenNLP (v2.0.2) POSTagger",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:opennlp.postagger_2.0.2",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:42+0000",
+            "serviceId": "brandeis_eldrad_grid_1:opennlp.coref_2.0.1",
+            "registeredDate": "2017-05-16T13:21:42+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "OpenNLP Coreference",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "OpenNLP (v2.0.1) Coreference",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:opennlp.coref_2.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:42+0000",
+            "serviceId": "brandeis_eldrad_grid_1:opennlp.parser_2.0.1",
+            "registeredDate": "2017-05-16T13:21:42+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "OpenNLP Parser",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "OpenNLP (v2.0.1) Parser",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:opennlp.parser_2.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:42+0000",
+            "serviceId": "brandeis_eldrad_grid_1:opennlp.splitter_2.0.1",
+            "registeredDate": "2017-05-16T13:21:42+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "OpenNLP Splitter",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "OpenNLP (v2.0.1) Splitter",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:opennlp.splitter_2.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:42+0000",
+            "serviceId": "brandeis_eldrad_grid_1:opennlp.namedentityrecognizer_2.0.1",
+            "registeredDate": "2017-05-16T13:21:42+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "OpenNLP NamedEntityRecognizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "OpenNLP (v2.0.1) NamedEntityRecognizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:opennlp.namedentityrecognizer_2.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:42+0000",
+            "serviceId": "brandeis_eldrad_grid_1:opennlp.tokenizer_2.0.1",
+            "registeredDate": "2017-05-16T13:21:42+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "OpenNLP Tokenizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "OpenNLP (v2.0.1) Tokenizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:opennlp.tokenizer_2.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:42+0000",
+            "serviceId": "brandeis_eldrad_grid_1:opennlp.postagger_2.0.1",
+            "registeredDate": "2017-05-16T13:21:42+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "OpenNLP POSTagger",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "OpenNLP (v2.0.1) POSTagger",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:opennlp.postagger_2.0.1",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:42+0000",
+            "serviceId": "brandeis_eldrad_grid_1:opennlp.parser_2.0.0",
+            "registeredDate": "2017-05-16T13:21:42+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "OpenNLP Parser",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "OpenNLP (v2.0.0) Parser",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:opennlp.parser_2.0.0",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:42+0000",
+            "serviceId": "brandeis_eldrad_grid_1:opennlp.splitter_2.0.0",
+            "registeredDate": "2017-05-16T13:21:42+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "OpenNLP Splitter",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "OpenNLP (v2.0.0) Splitter",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:opennlp.splitter_2.0.0",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:42+0000",
+            "serviceId": "brandeis_eldrad_grid_1:opennlp.namedentityrecognizer_2.0.0",
+            "registeredDate": "2017-05-16T13:21:42+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "OpenNLP NamedEntityRecognizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "OpenNLP (v2.0.0) NamedEntityRecognizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:opennlp.namedentityrecognizer_2.0.0",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:42+0000",
+            "serviceId": "brandeis_eldrad_grid_1:opennlp.tokenizer_2.0.0",
+            "registeredDate": "2017-05-16T13:21:42+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "OpenNLP Tokenizer",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "OpenNLP (v2.0.0) Tokenizer",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:opennlp.tokenizer_2.0.0",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        },
+        {
+            "active": true,
+            "updatedDate": "2017-05-16T13:21:42+0000",
+            "serviceId": "brandeis_eldrad_grid_1:opennlp.postagger_2.0.0",
+            "registeredDate": "2017-05-16T13:21:42+0000",
+            "supportedLanguages": [
+                
+            ],
+            "serviceDescription": "OpenNLP POSTagger",
+            "ownerUserId": "brandeis_eldrad_grid_1:eldrad",
+            "instanceType": "EXTERNAL",
+            "serviceTypeDomain": "lapps.nlp",
+            "serviceName": "OpenNLP (v2.0.0) POSTagger",
+            "endpointUrl": "http://eldrad.cs-i.brandeis.edu:8080/service_manager/invoker/brandeis_eldrad_grid_1:opennlp.postagger_2.0.0",
+            "serviceType": "SERVICE.TYPE.PROCESSOR"
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+import groovy.text.Template
+import src.main.library.ContainedPageLoader
+import src.main.library.FilePageLoader
+import src.main.library.PageLoader
+
+// Renders a named page with the selected loader.
+//   GET /view?name=about.tpl                      (default loader: file)
+//   GET /view?source=contained&name=help.tpl      (loaders: file, contained)
+File root = new File(System.getProperty('groovlets.templates') ?: 'src/main/templates')
+Map loaders = [file: new FilePageLoader(root), contained: new ContainedPageLoader(root)]
+Map model = [node: System.getProperty('node.name') ?: 'local', year: new Date().format('yyyy')]
+response.contentType = 'text/plain'
+PageLoader loader = loaders[params.source ?: 'file']
+if (loader == null || !params.name) {
+    response.status = 400
+    out.println "Expected name and source (file|contained)."
+    return
+}
+try {
+    Template page = loader.load(params.name)
+    out.println page.make(model).toString()
+}
+catch (IOException | IllegalArgumentException e) {
+    response.status = 404
+    out.println "Unknown page."
+}
+return
